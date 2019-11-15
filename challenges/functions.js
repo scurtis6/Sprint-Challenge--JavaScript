@@ -35,7 +35,7 @@ function greeting(first_name, last_name){
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: nestedfunction is the child function of myfunction, therefore nestedfunction inherits information of the myfunction.
+// Explanation: nestedfunction is the child function of myfunction, therefore nestedfunction inherits information of the myfunction, giving it access to the variable internal
 
 
 const external = "I'm outside the function";
