@@ -127,9 +127,11 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(function(names) {
-  return displayNames.push(`${names.animal_name}, ${names.scientific_name}`)
-})
+// Arrow function
+zooAnimals.forEach(names => displayNames.push(`${names.animal_name}, ${names.scientific_name}`));
+// zooAnimals.forEach(function(names) {
+//   return displayNames.push(`${names.animal_name}, ${names.scientific_name}`)
+// })
 console.log(displayNames)
 /* Request 2: .map()
 
@@ -137,9 +139,11 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 const lowCaseAnimalNames =[];
-zooAnimals.map(function(lowerCase){
-  return lowCaseAnimalNames.push( lowerCase.animal_name.toLowerCase())
-})
+// Arrow function
+zooAnimals.map(lowerCase => lowCaseAnimalNames.push(lowerCase.animal_name.toLowerCase()));
+// zooAnimals.map(function(lowerCase){
+//   return lowCaseAnimalNames.push( lowerCase.animal_name.toLowerCase())
+// })
 console.log(lowCaseAnimalNames)
 
 /* Request 3: .filter() 
@@ -148,9 +152,11 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 var lowPopulationAnimals = [];
-lowPopulationAnimals = zooAnimals.filter(function(lowPop){
-  return lowPop.population < 5
-})
+// Arrow function
+lowPopulationAnimals = zooAnimals.filter(lowPop => lowPop.population < 5)
+// lowPopulationAnimals = zooAnimals.filter(function(lowPop){
+//   return lowPop.population < 5
+// })
 console.log(lowPopulationAnimals)
 /* Request 4: .reduce() 
 
@@ -158,9 +164,11 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 var populationTotal = [];
-populationTotal = zooAnimals.reduce(function(accumulator, currentValue){
-  return accumulator + currentValue.population;
-  }, 0)
+// Arrow function
+populationTotal = zooAnimals.reduce((accumalutor, currentValue) => accumalutor + (currentValue.population), 0)
+// populationTotal = zooAnimals.reduce(function(accumulator, currentValue){
+//   return accumulator + currentValue.population;
+//   }, 0)
 console.log(populationTotal);
 
 /*
