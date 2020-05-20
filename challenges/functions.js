@@ -9,7 +9,6 @@
 function consume(a, b, cb){
   return cb(a,b);
 }
-
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
@@ -18,14 +17,13 @@ function consume(a, b, cb){
 function add(num1, num2){
   return num1 + num2;
 }
-
 function multiply(num1, num2){
   return num1 * num2;
 }
-
 function greeting(first_name, last_name){
   return `Hello ${first_name} ${last_name}, nice to meet you!`
 }
+
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
  console.log(consume(2, 2, add)); // 4
@@ -37,7 +35,7 @@ function greeting(first_name, last_name){
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: nestedfunction is the child function of myfunction, therefore nestedfunction inherits information of the myfunction.
+// Explanation: nestedfunction is the child function of myfunction, therefore nestedfunction inherits information of the myfunction, giving it access to the variable internal
 
 
 const external = "I'm outside the function";
